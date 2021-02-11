@@ -7,7 +7,7 @@ import time
 
 # step 2: define our connection information for Redis
 # Replaces with your configuration information
-redis_host = "localhost:5000"
+redis_host = "localhost"
 redis_port = 6379
 redis_password = ""
 
@@ -15,7 +15,7 @@ redis_password = ""
 def hello_redis():
     """Example Hello Redis Program"""
     
-    print("doing things")
+    print("Doing things")
 
     counter = 1;
 

@@ -4,9 +4,9 @@ RUN apk update && apk add supervisor && apk add python3 && apk add py3-pip && pi
 
 RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY FlaskRedis.py /FlaskRedis.py 
-COPY HelloRedis.py /HelloRedis.py
+COPY FlaskRedis.py .
+COPY HelloRedis.py .
 
-EXPOSE 5000
+EXPOSE 8080
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
